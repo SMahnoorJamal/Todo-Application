@@ -10,7 +10,7 @@ import { CustomCheckBox } from "../../components/CustomCheckBox";
 export const TaskScreen = ({ navigation }) => {
 
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor:'white'}}>
 
             <Header title="Task" />
 
@@ -26,15 +26,18 @@ export const TaskScreen = ({ navigation }) => {
                         <TaskList />
                     </View>
             
-                <View style={styles.tasksConTainer1}>
+                <View style={styles.CompletedText}>
               
                     <CustomText text="Completed" />
 
-                    <CustomCheckBox text="Respond to Jane email"/>
-                    <CustomCheckBox text ="Rechedule weekly meeting"/>
-                    <CustomCheckBox/>
                 </View>
+                <View style={styles.tasksConTainer1}>
 
+              <CustomCheckBox defaultChecked={true} value={true} text="Respond to Jane email"/>
+              <CustomCheckBox text ="Rechedule weekly meeting"/>
+              <CustomCheckBox text= "Service my bike"/>
+              <CustomCheckBox text= "Recheck the agreement document"/>
+          </View>
             </View>
 
         </ScrollView>

@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import Header from '../components/Header/Header';
-import Input from '../components/Input/index';
- import Button from '../components/Button';
-import { CustomText } from '../components/CustomText';
+import Header from '../../components/Header/Header';
+import Button from '../../components/Button';
+import { CustomText } from '../../components/CustomText';
+import Input from '../../components/Input';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { styles } from './styles';
 
 const Login = ({navigation}) => {
 
@@ -23,7 +25,10 @@ const Login = ({navigation}) => {
             </View>
 
             <View style={styles.textStyle}>
+                <TouchableOpacity>
                 <CustomText text="Forgot your password?" />
+                </TouchableOpacity>
+                
             </View>
 
         </ScrollView>
@@ -31,26 +36,5 @@ const Login = ({navigation}) => {
 
 }
 
-const styles = StyleSheet.create({
-
-    container:
-    {
-        // width:'90%',
-        backgroundColor: 'white',
-        flex: 1
-    },
-
-    inputContainer: {
-        marginTop: 10,
-        width:'90%',
-    },
-    buttonContainer: {
-        marginTop: '40%'
-    },
-    textStyle: {
-        alignItems: 'center',
-        marginTop: 9
-    }
-})
 
 export default Login;
