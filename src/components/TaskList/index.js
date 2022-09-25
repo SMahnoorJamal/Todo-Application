@@ -1,6 +1,6 @@
 import React from "react";
 
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList, Text, SafeAreaView } from "react-native";
 import CheckBox from '@react-native-community/checkbox';
 import { styles } from "./styles";
 import { Data } from "./Data";
@@ -12,6 +12,18 @@ const RenderRight = () => {
         <View style={{ backgroundColor: "red" }}>
             <Text>Delete</Text>
         </View>
+    )
+}
+
+export const TaskList = () => {
+    return (
+        <SafeAreaView style={{ flex: 1 }}>
+            <FlatList data={Data}
+                style={{ marginTop: 8 }}
+                renderItem={({ item, index }) => <RenderItem item={item} index={index} />}
+            />
+        </SafeAreaView>
+
     )
 }
 
@@ -31,16 +43,6 @@ const RenderItem = ({ item, index }) => {
                 </View>
             </View>
         </Swipeable>
-
-    )
-}
-
-export const TaskList = () => {
-    return (
-
-        <FlatList data={Data}
-            style={{ marginTop: 8 }}
-            renderItem={({ item, index }) => <RenderItem item={item} index={index} />} />
 
     )
 }

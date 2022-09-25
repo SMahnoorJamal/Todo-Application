@@ -1,21 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Header from '../components/Header/Header';
-import Input from '../components/Input';
-import Button from '../components/Button';
+import Input from '../components/Input/index';
+ import Button from '../components/Button';
 import { CustomText } from '../components/CustomText';
 
 const Login = ({navigation}) => {
 
     return (
 
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container}> 
 
             <Header title='Log In' />
 
             <View style={styles.inputContainer}>
-                <Input placeholder='Email' iconText='Show' />
-                <Input placeholder='Password' />
+                <Input placeholder='Email'  />
+                <Input placeholder='Password' iconText='Show' />
             </View>
 
             <View style={styles.buttonContainer}>
@@ -35,12 +35,14 @@ const styles = StyleSheet.create({
 
     container:
     {
+        // width:'90%',
         backgroundColor: 'white',
         flex: 1
     },
 
     inputContainer: {
-        marginTop: 10
+        marginTop: 10,
+        width:'90%',
     },
     buttonContainer: {
         marginTop: '40%'

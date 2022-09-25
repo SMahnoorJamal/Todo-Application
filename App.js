@@ -14,6 +14,7 @@ import Login from './src/screens/Login';
 import { TaskScreen } from './src/screens/TaskSceen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NewTaskScreen } from './src/screens/NewTaskScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +56,10 @@ const App = () => {
             <Stack.Screen
               name="TaskScreen"
               component={TaskScreen} />
+
+              <Stack.Screen
+              name="NewTaskScreen"
+              component={NewTaskScreen}/>
 
           </Stack.Navigator>
     </NavigationContainer>

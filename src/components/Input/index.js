@@ -5,9 +5,10 @@ import { styles } from "./styles";
 
 const Input = (props) => {
 
+ console.log("propsInput", props)
     return (
 
-        <View style={styles.container}>
+        <View style={props.style ? props.style : styles.container}>
 
             <TextInput
                 style={styles.input}

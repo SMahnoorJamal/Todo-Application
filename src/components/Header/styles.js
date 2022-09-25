@@ -8,15 +8,26 @@ export const styles = StyleSheet.create({
         width: '90%',
         left: 19,
         right: 19,
-        marginTop: 20,
+        marginTop: 30,
         alignItems: 'center',
         justifyContent: 'center'
     },
-
+    header1: {
+        height: 40,
+        width: '64%',
+        left: 19,
+        right: 19,
+        // backgroundColor:'red',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        marginTop: 30,
+        alignItems: 'center',
+    },
     headerText: {
         fontSize: 30,
         color: '#000000',
-        fontStyle: 'normal'
+        fontStyle: 'normal',
+
     }
 
 })
