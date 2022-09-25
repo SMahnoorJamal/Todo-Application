@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Header from '../components/Header/Header';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import { CustomText } from '../components/CustomText';
 
-const Login = () => {
+const Login = ({navigation}) => {
 
     return (
 
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
 
             <Header title='Log In' />
 
@@ -19,14 +19,14 @@ const Login = () => {
             </View>
 
             <View style={styles.buttonContainer}>
-                <Button text='Log In'  />
+                <Button onPress={() => navigation.navigate('TaskScreen')} text='Log In' />
             </View>
 
             <View style={styles.textStyle}>
                 <CustomText text="Forgot your password?" />
             </View>
 
-        </View>
+        </ScrollView>
     )
 
 }
@@ -34,7 +34,10 @@ const Login = () => {
 const styles = StyleSheet.create({
 
     container:
-        { backgroundColor: 'white' },
+    {
+        backgroundColor: 'white',
+        flex: 1
+    },
 
     inputContainer: {
         marginTop: 10
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
         marginTop: '40%'
     },
     textStyle: {
-        alignItems: 'center', 
+        alignItems: 'center',
         marginTop: 9
     }
 })

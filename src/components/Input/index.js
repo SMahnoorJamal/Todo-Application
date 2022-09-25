@@ -13,14 +13,14 @@ const Input = (props) => {
                 style={styles.input}
                 placeholder={props.placeholder ? props.placeholder : "Email"} />
 
-{props.iconText ? 
-            <TouchableOpacity style={{ width: '15%'}}>
-                <Text style={styles.textStyle}>{props.iconText}</Text>
-            </TouchableOpacity>
-            :
-         <TouchableOpacity style={{ width: '15%'}}>
-        </TouchableOpacity>
-}
+            {props.iconText ?
+                <TouchableOpacity style={{ width: '15%' }}>
+                    <Text style={styles.textStyle}>{props.iconText}</Text>
+                </TouchableOpacity>
+                :
+                <TouchableOpacity style={{ width: '15%' }}>
+                </TouchableOpacity>
+            }
 
         </View>
 

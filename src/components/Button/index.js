@@ -4,10 +4,11 @@ import { View, TouchableOpacity, StyleSheet, Text, ProgressViewIOSComponent } fr
 
 const Button = (props) => {
 
+    console.log("onPress", props)
     return (
 
         <View>
-            <TouchableOpacity style={styles.button} >
+            <TouchableOpacity onPress={props.onPress} style={styles.button} >
                 <Text style={styles.buttonText}>{props.text ? props.text : 'Log In'}</Text>
             </TouchableOpacity>
         </View>
