@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, UseState } from 'react-native';
 import Header from '../../components/Header/Header';
 import Button from '../../components/Button';
 import { CustomText } from '../../components/CustomText';
@@ -29,7 +29,7 @@ const Login = ({navigation}) => {
                 <CustomText text="Forgot your password?" />
                 </TouchableOpacity>
                 
-            </View>
+            </View>                   
 
         </ScrollView>
     )

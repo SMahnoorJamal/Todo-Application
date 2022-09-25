@@ -15,6 +15,7 @@ import { TaskScreen } from './src/screens/TaskSceen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NewTaskScreen } from './src/screens/NewTaskScreen';
+import { Reminder } from './src/popups/Reminder';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,26 +43,29 @@ const App = () => {
   return (
 
     <NavigationContainer>
-          <Stack.Navigator
-           screenOptions={{
-            headerShown: false
-          }}>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}>
 
-            <Stack.Screen
-              name="Login"
-              component={Login}
-              // options={{ title: 'Welcome' }}
-            />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+        />
 
-            <Stack.Screen
-              name="TaskScreen"
-              component={TaskScreen} />
+        <Stack.Screen
+          name="TaskScreen"
+          component={TaskScreen} />
 
-              <Stack.Screen
-              name="NewTaskScreen"
-              component={NewTaskScreen}/>
+        <Stack.Screen
+          name="Reminder"
+          component={Reminder} />
 
-          </Stack.Navigator>
+        <Stack.Screen
+          name="NewTaskScreen"
+          component={NewTaskScreen} />
+
+      </Stack.Navigator>
     </NavigationContainer>
 
 
