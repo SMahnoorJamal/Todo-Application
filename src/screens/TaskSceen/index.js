@@ -26,7 +26,7 @@ export const TaskScreen = ({ navigation }) => {
                     <View style={styles.container}>
 
                          <TouchableOpacity onPress={() => navigation.navigate('NewTaskScreen')}>
-                            <CustomText text="+ Add new task" />
+                               <CustomText text="+ Add new task" />
                         </TouchableOpacity>
 
 
