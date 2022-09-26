@@ -16,7 +16,8 @@ export const styles = StyleSheet.create({
     tasksConTainer1: {
         marginTop: '2%',
         left: '6.5%',
-         width: '85%'
+         width: '85%',
+         marginBottom: '15%'
     },
     CompletedText: {
         marginTop: '5%',

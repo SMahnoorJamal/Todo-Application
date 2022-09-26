@@ -9,7 +9,8 @@ export const CustomCheckBox =(props) => {
         <View style={styles.item}>
                 <View>
                     <CheckBox
-                    value={true} style={{ borderColor: '#DADADA', borderRadius: "10%" }} />
+                    tintColors={{ true: '#DADADA', false: 'white' }}
+                    value={true} style={{  borderColor: '#DADADA', borderRadius: "10%" }} />
                 </View> 
 
 
