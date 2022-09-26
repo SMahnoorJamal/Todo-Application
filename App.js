@@ -58,7 +58,7 @@ const App = () => {
         <Tab.Screen  name="Task" component={TaskScreen} />
         <Tab.Screen name="Location" component={NewTaskScreen} />
       </Tab.Navigator> */}
- <Stack.Navigator
+      <Stack.Navigator
         screenOptions={{
           headerShown: false
         }}>
@@ -74,7 +74,7 @@ const App = () => {
 
         <Stack.Screen
           name="Reminder"
-          component={Reminder} /> 
+          component={Reminder} />
 
         <Stack.Screen
           name="NewTaskScreen"
