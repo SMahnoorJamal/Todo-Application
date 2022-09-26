@@ -17,9 +17,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NewTaskScreen } from './src/screens/NewTaskScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Reminder } from './src/popups/Reminder';
-import Tabs from './src/Navigation/tabs';
+// import Tabs from './src/Navigation/tabs';
 
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 const MyStack = () => {
