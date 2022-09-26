@@ -22,33 +22,34 @@ export const NewTaskScreen = ({ navigation }) => {
                     {/* <Text>Hello!</Text> */}
 
                     <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-                <Text>
-                Reminder
-                </Text>
-              <Text style={styles.modalText}>
-             
-Consequat velit qui adipisicing sunt do reprehenderit ad laborum tempor ullamco exercitation.
- Ullamco tempor adipisicing et voluptate duis sit esse aliqua esse ex dolore esse.
- Consequat velit qui adipisicing sunt.
-              </Text>
+                        <View style={styles.modalView}>
+                            <Text style={{ fontFamily: 'Inter', color: '#000000', fontSize: 25 }}>
+                                Reminder
+                            </Text>
+                            <Text style={styles.modalText}>
 
-              <Button 
-              style={{
-              alignItems: "center",
-              backgroundColor: "#000000",
-              borderRadius: 100,
-              height: 51,
-              width: 200,
-              justifyContent: 'center',
-              left: 2,
-              right: 16}}
-              onPress={handleModal}
-               text="Remind me again"></Button>
-            </View> 
-          </View>
+                                Consequat velit qui adipisicing sunt do reprehenderit ad laborum tempor ullamco exercitation.
+                                Ullamco tempor adipisicing et voluptate duis sit esse aliqua esse ex dolore esse.
+                                Consequat velit qui adipisicing sunt.
+                            </Text>
 
-                    {/* <Button title="Hide modal" onPress={handleModal} /> */}
+                            <Button
+                                style={{
+                                    alignItems: "center",
+                                    backgroundColor: "#000000",
+                                    borderRadius: 100,
+                                    height: 51,
+                                    width: 200,
+                                    justifyContent: 'center',
+                                    left: 2,
+
+                                    right: 16
+                                }}
+                                onPress={handleModal}
+                                text="Remind me again"></Button>
+                        </View>
+                    </View>
+
                 </View>
             </Modal>
 
