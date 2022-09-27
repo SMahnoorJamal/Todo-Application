@@ -5,6 +5,7 @@ import CheckBox from '@react-native-community/checkbox';
 import { styles } from "./styles";
 import { Data } from "./Data";
 import {GestureHandlerRootView, Swipeable} from 'react-native-gesture-handler';
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 const RenderRight = () => {
 
@@ -12,8 +13,8 @@ const RenderRight = () => {
         <View style={{ backgroundColor: "red",width:'15%', alignItems: "center", justifyContent:'center'
         // ,borderBottomLeftRadius: 8, borderTopLeftRadius: 2, borderRadius: 14 
         }}>
-                {/* <Image style={styles.img} source={image}/> */}
-            <Text style={{color:'white'}}>Delete</Text>
+            <AntDesign name="delete" size={25} color="white"/>
+        
         </View>
     )
 }
