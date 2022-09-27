@@ -16,24 +16,41 @@ export const styles = StyleSheet.create({
     },
 
     inputContainer: {
-
+      // backgroundColor:'red',
+      width: '95%',
+      marginLeft: 5,
+      marginTop: "8%",
     },
     buttonContainer: {
-        marginTop: 10,
-        backgroundColor: 'red',
+        marginTop: "20%",
         height: '80%',
         width: '90%'
     },
     inputStyle: {
-        marginTop: 2,
-        width: '100%',
+        // marginTop: 2,
+        // width: '170%',
         backgroundColor: 'lightGreen',
         color: 'green',
-        height: '40%'
+        // height: '40%',
+          // width:200,
+          borderBottomColor:'lightGray',
+          borderBottomWidth:1,
+      
     },
     inputStyle1: {
-        height: '10%'
+
+        borderBottomColor:'lightGray',
+        borderBottomWidth:1,
+        // height: "60%"
     },
+    inputStyle2: {
+
+      borderBottomColor:'lightGray',
+      borderBottomWidth:1,
+      width: "95%",
+      marginLeft: 5
+      // height: "60%"
+  },
     modalView: {
         margin: 20,
         backgroundColor: "white",

@@ -11,6 +11,7 @@ const Input = (props) => {
         <View style={props.style ? props.style : styles.container}>
 
             <TextInput
+            {...props}
                 style={styles.input}
                 placeholder={props.placeholder ? props.placeholder : "Email"} />
 

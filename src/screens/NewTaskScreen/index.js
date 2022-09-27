@@ -54,15 +54,23 @@ export const NewTaskScreen = ({ navigation }) => {
             </Modal>
 
 
-            {/* 
-        <View style={styles.inputContainer}>
-            <Input placeholder='Summary' style={styles.inputStyle} />
-             <Input placeholder='Description' style={styles.inputStyle1}/> 
-        </View> */}
 
-            {/* <View style={styles.buttonContainer}> 
+            <View style={styles.inputContainer}>
+                <Input placeholder='Summary' style={styles.inputStyle} />
+
+                <View style={{ marginTop: 10 }}>
+                    <Input multiline={true} placeholder='Description' style={styles.inputStyle1} />
+                </View>
+
+            </View>
+
+            <View style={{ marginTop: 10 }}>
+                    <Input multiline={true} placeholder='Due date' style={styles.inputStyle2} />
+                </View>
+
+            <View style={styles.buttonContainer}> 
             <Button onPress={() => navigation.navigate('TaskScreen')} text='Save' />
-        </View> */}
+        </View>
             {/* 
         <View style={styles.textStyle}>
             <CustomText text="Forgot your password?" />

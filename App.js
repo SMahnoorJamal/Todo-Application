@@ -11,7 +11,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NewTaskScreen } from './src/screens/NewTaskScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Reminder } from './src/popups/Reminder';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import { Location } from './src/screens/Location';
 // import Tabs from './src/Navigation/tabs';
 
 const Tab = createBottomTabNavigator();
@@ -21,14 +22,11 @@ function Home() {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
-        name="Task"
+        name="Task1"
         component={TaskScreen}
-        screenOptions={{
-          tabBarLabel: 'Task',
-          tabBarIcon: ({ focused, color, size }) => (
-            <Ionicons name="add-circle" size={25} />
-
-          ),
+        navigationOptions={{
+          tabBarLabel: 'Task2',
+          tabBarIcon: () =>  <AntDesign name="addfile" size={25} />
         }} />
 
       <Tab.Screen
@@ -37,7 +35,7 @@ function Home() {
 
       <Tab.Screen
         name="Location"
-        component={Reminder} />
+        component={Location} />
     </Tab.Navigator>
   );
 }
