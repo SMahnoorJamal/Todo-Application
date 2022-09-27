@@ -1,10 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+
 
 import React from 'react';
 import {
@@ -17,49 +11,33 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NewTaskScreen } from './src/screens/NewTaskScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Reminder } from './src/popups/Reminder';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 // import Tabs from './src/Navigation/tabs';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-// const MyStack = () => {
-//   return (
-
-//     <Stack.Navigator>
-
-//       <Stack.Screen
-//         name="Login"
-//         component={Login}
-//         options={{ title: 'Welcome' }}
-//       />
-
-//     </Stack.Navigator>
-//   );
-// };
-
-// function HomeStackScreen() {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen name="Login" component={Login} />
-//     </Stack.Navigator>
-//   );
-// }
 function Home() {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen
-          name="TaskScreen"
-          component={TaskScreen} />
+      <Tab.Screen
+        name="Task"
+        component={TaskScreen}
+        screenOptions={{
+          tabBarLabel: 'Task',
+          tabBarIcon: ({ focused, color, size }) => (
+            <Ionicons name="add-circle" size={25} />
 
-        <Tab.Screen
-          name="Reminder"
-          component={Reminder} />
+          ),
+        }} />
 
-        <Tab.Screen
-          name="NewTaskScreen"
-          component={NewTaskScreen} />
-      {/* <Tab.Screen  name="Profile" component={Profile} />
-      <Tab.Screen name="Settings" component={Settings} /> */}
+      <Tab.Screen
+        name="Add Task"
+        component={NewTaskScreen} />
+
+      <Tab.Screen
+        name="Location"
+        component={Reminder} />
     </Tab.Navigator>
   );
 }
@@ -70,34 +48,17 @@ const App = () => {
 
     <NavigationContainer>
 
-      {/* <Tab.Navigator
-       screenOptions={{
-        headerShown: false
-      }}>
-       <Tab.Screen name="HomeStackScreen" component={HomeStackScreen} /> 
-        <Tab.Screen  name="Task" component={TaskScreen} />
-        <Tab.Screen name="Location" component={NewTaskScreen} />
-      </Tab.Navigator> */}
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen 
-        name="Login" 
-        component={Login} />
-
-        <Stack.Screen 
-        name="Home" 
-        component={Home} />
-{/* 
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
         <Stack.Screen
-          name="TaskScreen"
-          component={TaskScreen} />
+          name="Login"
+          component={Login} />
 
         <Stack.Screen
-          name="Reminder"
-          component={Reminder} />
-
-        <Stack.Screen
-          name="NewTaskScreen"
-          component={NewTaskScreen} /> */}
+          name="Home"
+          component={Home} />
       </Stack.Navigator>
 
     </NavigationContainer>

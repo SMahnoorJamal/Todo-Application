@@ -3,11 +3,11 @@ import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
     item: {
-        padding: 17,
+        padding: 10,
         flexDirection: 'row',
         // borderRadius: 15,
         // backgroundColor: 'orange',
-        marginLeft: '-6%' ,
+        marginLeft: '-2%' ,
         borderRadius: 7
     },
     date: {
