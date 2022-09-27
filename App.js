@@ -19,31 +19,51 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Reminder } from './src/popups/Reminder';
 // import Tabs from './src/Navigation/tabs';
 
-// const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-const MyStack = () => {
+// const MyStack = () => {
+//   return (
+
+//     <Stack.Navigator>
+
+//       <Stack.Screen
+//         name="Login"
+//         component={Login}
+//         options={{ title: 'Welcome' }}
+//       />
+
+//     </Stack.Navigator>
+//   );
+// };
+
+// function HomeStackScreen() {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="Login" component={Login} />
+//     </Stack.Navigator>
+//   );
+// }
+function Home() {
   return (
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
+        <Tab.Screen
+          name="TaskScreen"
+          component={TaskScreen} />
 
-    <Stack.Navigator>
+        <Tab.Screen
+          name="Reminder"
+          component={Reminder} />
 
-      <Stack.Screen
-        name="Login"
-        component={Login}
-        options={{ title: 'Welcome' }}
-      />
-
-    </Stack.Navigator>
-  );
-};
-
-function HomeStackScreen() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
-    </Stack.Navigator>
+        <Tab.Screen
+          name="NewTaskScreen"
+          component={NewTaskScreen} />
+      {/* <Tab.Screen  name="Profile" component={Profile} />
+      <Tab.Screen name="Settings" component={Settings} /> */}
+    </Tab.Navigator>
   );
 }
+
 const App = () => {
 
   return (
@@ -58,16 +78,15 @@ const App = () => {
         <Tab.Screen  name="Task" component={TaskScreen} />
         <Tab.Screen name="Location" component={NewTaskScreen} />
       </Tab.Navigator> */}
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false
-        }}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen 
+        name="Login" 
+        component={Login} />
 
-        <Stack.Screen
-          name="Login"
-          component={Login}
-        />
-
+        <Stack.Screen 
+        name="Home" 
+        component={Home} />
+{/* 
         <Stack.Screen
           name="TaskScreen"
           component={TaskScreen} />
@@ -78,8 +97,7 @@ const App = () => {
 
         <Stack.Screen
           name="NewTaskScreen"
-          component={NewTaskScreen} />
-
+          component={NewTaskScreen} /> */}
       </Stack.Navigator>
 
     </NavigationContainer>

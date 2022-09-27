@@ -10,6 +10,7 @@ import { styles } from './styles';
 
 const Login = ({navigation}) => {
 
+    console.log("navProps", navigation)
     return (
 
         // <KeyboardAvoidingView  style={styles.container} behavior='height'>
@@ -23,7 +24,7 @@ const Login = ({navigation}) => {
             </View>
 
             <View style={styles.buttonContainer}>
-                <Button onPress={() => navigation.navigate('TaskScreen')} text='Log In' />
+                <Button onPress={() => navigation.navigate('Home')} text='Log In' />
             </View>
 
             <View style={styles.textStyle}>
