@@ -43,6 +43,9 @@ Consequat velit qui adipisicing sunt do reprehenderit ad laborum tempor ullamco 
               right: 16}}
               onPress={() => {navigation.navigate('TaskScreen'),setModalVisible(!modalVisible)}}
                text="Remind me again"></Button>
+
+
+               <Text>Skip</Text>
             </View> 
           </View>
         </Modal>

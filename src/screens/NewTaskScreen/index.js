@@ -45,8 +45,25 @@ export const NewTaskScreen = ({ navigation }) => {
 
                                     right: 16
                                 }}
-                                onPress={handleModal}
+                                // onPress={handleModal}
                                 text="Remind me again"></Button>
+
+
+                            <Button
+                                style={{
+                                    alignItems: "center",
+                                    backgroundColor: "white",
+                                    borderRadius: 100,
+                                    height: 51,
+                                    width: 200,
+                                    justifyContent: 'center',
+                                    left: 2,
+                                    right: 16
+                                }}
+                                onPress={handleModal}
+                                text="Skip"
+                                textStyle={{ color: "black" }}
+                            ></Button>
                         </View>
                     </View>
 
@@ -65,12 +82,12 @@ export const NewTaskScreen = ({ navigation }) => {
             </View>
 
             <View style={{ marginTop: 10 }}>
-                    <Input multiline={true} placeholder='Due date' style={styles.inputStyle2} />
-                </View>
+                <Input multiline={true} placeholder='Due date' style={styles.inputStyle2} />
+            </View>
 
-            <View style={styles.buttonContainer}> 
-            <Button onPress={() => navigation.navigate('TaskScreen')} text='Save' />
-        </View>
+            <View style={styles.buttonContainer}>
+                <Button onPress={() => navigation.navigate('TaskScreen')} text='Save' />
+            </View>
             {/* 
         <View style={styles.textStyle}>
             <CustomText text="Forgot your password?" />

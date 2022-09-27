@@ -10,7 +10,7 @@ const Button = (props) => {
         <View>
             <TouchableOpacity onPress={props.onPress} style={props.style? props.style :
                  styles.button} >
-                <Text style={styles.buttonText}>{props.text ? props.text : 'Log In'}</Text>
+                <Text  style={props.textStyle? props.textStyle : styles.buttonText} >{props.text ? props.text : 'Log In'}</Text>
             </TouchableOpacity>
         </View>
     )
