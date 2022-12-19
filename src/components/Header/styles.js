@@ -5,11 +5,12 @@ export const styles = StyleSheet.create({
     header:
     {
         height: 40,
-        width: '90%',
-        left: 19,
+        width: '100%',
+        left: 4,
         right: 19,
         marginTop: 30,
         alignItems: 'center',
+        // backgroundColor: "red",
         justifyContent: 'center'
     },
     header1: {

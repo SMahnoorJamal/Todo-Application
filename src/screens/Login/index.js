@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, UseState, KeyboardAvoidingView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, UseState, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 import Header from '../../components/Header/Header';
 import Button from '../../components/Button';
 import { CustomText } from '../../components/CustomText';
 import Input from '../../components/Input';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+// import { TouchableOpacity } from 'react-native-gesture-handler';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { styles } from './styles';
 
@@ -28,10 +28,8 @@ const Login = ({navigation}) => {
             </View>
 
             <View style={styles.textStyle}>
-                <TouchableOpacity>
-                <CustomText text="Forgot your password?" />
-                </TouchableOpacity>
-                
+                <CustomText touchable="true" text="Forgot your password?" />
+
             </View>                   
 
         </ScrollView>

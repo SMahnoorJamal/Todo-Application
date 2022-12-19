@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import { View, FlatList, Text, SafeAreaView, Image} from "react-native";
 import CheckBox from '@react-native-community/checkbox';
@@ -33,12 +33,16 @@ export const TaskList = () => {
 
 const RenderItem = ({ item, index }) => {
 
+    const [isSelected, setSelection] = useState(false);
     return (
         <GestureHandlerRootView>
         <Swipeable renderRightActions={RenderRight} >
             <View style={styles.item}>
                 <View>
-                    <CheckBox style={{ borderColor: '#DADADA', borderRadius: "10%" }} />
+                    <CheckBox 
+                     value={isSelected}
+                     onValueChange={setSelection}
+                     style={{ borderColor: '#DADADA', borderRadius: "10%" }} />
                 </View>
 
 

@@ -12,8 +12,9 @@ const Input = (props) => {
 
             <TextInput
             {...props}
-                style={styles.input}
-                placeholder={props.placeholder ? props.placeholder : "Email"} />
+                style={props.inputContainer ? props.inputContainer : styles.input}
+                placeholder={props.placeholder ? props.placeholder : "Email"} >
+                </TextInput>
 
             {props.iconText ?
                 <TouchableOpacity style={{ width: '15%' }}>

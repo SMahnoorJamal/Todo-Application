@@ -6,9 +6,9 @@ export const styles = StyleSheet.create({
     container: {
         width: '100%',
         flexDirection: 'row',
-        justifyContent: 'center',
+//justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 8,
+        borderRadius: 25,
         borderWidth: 1,
         borderColor: '#E8E8E8',
         margin: 9,
@@ -16,17 +16,21 @@ export const styles = StyleSheet.create({
         left: '8%',
         right: '17%',
         height: 46,
-        // backgroundColor:'orange',
-         backgroundColor:'#F6F6F6',
+    // backgroundColor:'orange',
+        backgroundColor:'#F6F6F6',
     },
     input: {
         position: 'relative',
         backgroundColor: '#F6F6F6',
-        width: '65%',
+        width: '84%',
+        justifyContent: "center",
+        paddingVertical: 7,
+        marginLeft: 8
+        // alignItems:"center"
 
     },
     textStyle: {
-        marginLeft: '32%',
+        // marginLeft: '42%',
         color: '#000000'
     }
 });

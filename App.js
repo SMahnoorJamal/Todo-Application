@@ -31,7 +31,12 @@ function Home() {
 
       <Tab.Screen
         name="Add Task"
-        component={NewTaskScreen} />
+        component={NewTaskScreen}
+        navigationOptions={{
+          visible: true
+        }}
+        screenOptions={true}
+        setOptions= {true}  />
 
       <Tab.Screen
         name="Location"

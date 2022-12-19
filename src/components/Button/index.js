@@ -18,16 +18,15 @@ const Button = (props) => {
 }
 
 const styles = StyleSheet.create({
-    button: {
+    button: {     
         alignItems: "center",
         backgroundColor: "#000000",
         // padding: 20,
         borderRadius: 100,
         height: 51,
-        width: 374,
+        width: '95%',
         justifyContent: 'center',
-        left: 16,
-        right: 16
+        left: 10,
     },
     buttonText: {
         color: 'white',

@@ -5,14 +5,15 @@ import Button from "../components/Button";
 export const Reminder =({navigation}) => {
     console.log("navifrr", {navigation})
 
+    var visible = true
     const [modalVisible, setModalVisible] = useState(true);
     return (
         <View style={styles.centeredView}>
-        <Modal
+        {/* <Modal
           animationType="slide"
         //   transparent={true}
           backdropOpacity={0.3}
-          visible={modalVisible ? modalVisible : modalVisible
+          visible={modalVisible ? modalVisible : !modalVisible ? !modalVisible : modalVisible
         }
           onRequestClose={() => {
             Alert.alert("Modal has been closed.");
@@ -48,7 +49,7 @@ Consequat velit qui adipisicing sunt do reprehenderit ad laborum tempor ullamco 
                <Text>Skip</Text>
             </View> 
           </View>
-        </Modal>
+        </Modal> */}
         {/* <Pressable
           style={[styles.button, styles.buttonOpen]}
           onPress={() => setModalVisible(true)}

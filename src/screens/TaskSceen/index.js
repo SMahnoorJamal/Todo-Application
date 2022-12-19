@@ -32,6 +32,8 @@ export const TaskScreen = ({ navigation }) => {
 
                         <View style={styles.tasksConTainer}>
                             <CustomText text="Incomplete" />
+
+                            {/* FlatList Component */}
                             <TaskList />
                         </View>
 
