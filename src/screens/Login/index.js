@@ -25,7 +25,7 @@ const Login = ({navigation}) => {
 
             <View style={styles.buttonContainer}>
                 <Button onPress={() => navigation.navigate('Home')} text='Log In' />
-            </View>
+            </View >
 
             <View style={styles.textStyle}>
                 <CustomText touchable="true" text="Forgot your password?" />
