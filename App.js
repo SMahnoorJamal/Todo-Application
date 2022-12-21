@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {
-  StyleSheet,
+  StyleSheet, Image, View
 } from 'react-native';
 import Login from './src/screens/Login';
 import { TaskScreen } from './src/screens/TaskSceen';
@@ -41,14 +41,27 @@ function Home() {
       <Tab.Screen
         name="Location"
         component={Location}
-        navigationOptions= {{
-          tabBarOptions: { showIcon: true },
-          tabBarIcon: ({ tintColor }) => {
-                    return (<Image
-                        style={{ width: 50, height: 50 }}
-                        source={{ uri: "https://facebook.github.io/react/img/logo_og.png" }}/>);}
-          }
-      }/>
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <View>
+                <Image
+                  source={require('../todoApplication/src/assets/icons/location.png')}
+                  resizeMode="contain"
+                  style={{ width: 28 }}
+                />
+              </View>
+            );
+          },
+        }}
+        // navigationOptions= {{
+        //   tabBarOptions: { showIcon: true },
+        //   tabBarIcon: ({ tintColor }) => {
+        //             return (<Image
+        //                 style={{ width: 50, height: 50 }}
+        //                 source={{ uri: "https://facebook.github.io/react/img/logo_og.png" }}/>);}
+        //   }}
+      />
     </Tab.Navigator>
   );
 }
