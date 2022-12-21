@@ -10,10 +10,11 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 const RenderRight = () => {
 
     return (
-        <View style={{ backgroundColor: "red",width:'15%', alignItems: "center", justifyContent:'center'
+        <View style={{ backgroundColor: "red",width:'20%', 
+        alignItems: "center", justifyContent:'center',        
         // ,borderBottomLeftRadius: 8, borderTopLeftRadius: 2, borderRadius: 14 
         }}>
-            <AntDesign name="delete" size={25} color="white"/>
+           <AntDesign style={{right: 7}} name="delete" size={25} color="white"/> 
         
         </View>
     )

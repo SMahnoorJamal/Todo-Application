@@ -40,7 +40,15 @@ function Home() {
 
       <Tab.Screen
         name="Location"
-        component={Location} />
+        component={Location}
+        navigationOptions= {{
+          tabBarOptions: { showIcon: true },
+          tabBarIcon: ({ tintColor }) => {
+                    return (<Image
+                        style={{ width: 50, height: 50 }}
+                        source={{ uri: "https://facebook.github.io/react/img/logo_og.png" }}/>);}
+          }
+      }/>
     </Tab.Navigator>
   );
 }

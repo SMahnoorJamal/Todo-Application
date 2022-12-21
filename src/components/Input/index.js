@@ -12,6 +12,7 @@ const Input = (props) => {
 
             <TextInput
             {...props}
+            multiline={props.multiline ? props.multiline : false}
                 style={props.inputContainer ? props.inputContainer : styles.input}
                 placeholder={props.placeholder ? props.placeholder : "Email"} >
                 </TextInput>

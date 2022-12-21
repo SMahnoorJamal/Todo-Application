@@ -4,20 +4,21 @@ export const styles = StyleSheet.create({
 
   container: {
     backgroundColor: 'white',
-    flex: 1
+    flex: 1,
   },
   tasksConTainer: {
     marginTop: '5%'
   },
   inputContainer: {
     width: '95%',
+    height: '30%',
     marginLeft: 5,
     marginTop: "8%",
   },
   buttonContainer: {
-    marginTop: "20%",
+    marginTop: "10%",
     height: '80%',
-    width: '100%'
+    width: '100%',
   },
   buttonStyle: {
     alignItems: "center",
@@ -44,15 +45,25 @@ buttonStyle2: {
 },
 
   inputStyle: {
-    // backgroundColor: 'red',
     // color: 'red',
-    borderBottomColor: 'lightGray',
-    borderBottomWidth: 1,
+    right: '30%',
+    marginTop: '3%',
+    left:10,
+    bottom:'2%',
+    width: '86%'
+    
+    // borderBottomColor: 'lightGray',
+    // borderBottomWidth: 1,
 
   },
+ 
   inputStyle1: {
-    borderBottomColor: 'lightGray',
-    borderBottomWidth: 1,
+    right: '30%',
+    marginTop: '3%',
+    left:10,
+    height: '100%',
+    bottom:'2%',
+    width: '86%'
   },
   inputStyle2: {
 

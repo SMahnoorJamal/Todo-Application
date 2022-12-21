@@ -4,13 +4,13 @@ export const styles = StyleSheet.create({
 
     container:{
         width: '100%',
-        left: '8%',
+        left: '4%',
         marginTop: '5%'
     },
 
     tasksConTainer: {
         marginTop: '5%',
-        left: '2%',
+        left: '1%',
         //  width: '85%'
     },
     tasksConTainer1: {
