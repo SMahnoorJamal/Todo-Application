@@ -15,6 +15,34 @@ export const styles = StyleSheet.create({
     marginLeft: 5,
     marginTop: "8%",
   },
+  textInputContainer:
+  {
+    flexDirection: "row",
+    right: '100%',
+    left: '13%',
+    width: "88%"
+},
+headerContainer:{
+  flexDirection: "row", alignItems: "center", justifyContent: "space-between"
+  , width: '60%', left: '4%'
+},
+textInputContainer2:
+{
+  flexDirection: "row",
+  right: '100%',
+  left: '13%',
+  //  height: '22%',  
+  top: 6,
+  width: "86%"
+},
+textInputContainer3:
+{
+  flexDirection: "row",
+  right: '100%',
+  left: '13%',
+  marginTop: '3%',
+  width: "88%"
+},
   buttonContainer: {
     marginTop: "10%",
     height: '80%',

@@ -23,7 +23,6 @@ export class NewTaskScreen extends Component {
             NavProps: props,
             props: null,
         };
-        // console.log("nyyyy", navigation)
         // const [isModalVisible, setIsModalVisible] = React.useState(true);
     }
 
@@ -33,10 +32,7 @@ export class NewTaskScreen extends Component {
         return (
             <ScrollView style={styles.container}>
 
-                <View style={{
-                    flexDirection: "row", alignItems: "center", justifyContent: "space-between"
-                    , width: '60%', left: '4%'
-                }}>
+                <View style={styles.headerContainer}>
                     <TouchableOpacity style={{ top: '7%' }} onPress={() => this.state.props.navigate('Login')}>
                         <Text style={{ color: '#000000', fontSize: 15 }}>Back</Text>
                     </TouchableOpacity>
@@ -50,12 +46,7 @@ export class NewTaskScreen extends Component {
 
                 <View style={{ marginTop: 12 }}>
 
-                    <View style={{
-                        flexDirection: "row",
-                        right: '100%',
-                        left: '13%',
-                        width: "88%"
-                    }}>
+                    <View style={styles.textInputContainer}>
                         <Ionicons style={{ top: '4%' }} size={25} name='chatbubble-ellipses-outline'></Ionicons>
                         <Input placeholder='Summary' style={styles.inputStyle}
                             inputContainer={{}} />
@@ -63,14 +54,7 @@ export class NewTaskScreen extends Component {
                     <Line />
 
 
-                    <View style={{
-                        flexDirection: "row",
-                        right: '100%',
-                        left: '13%',
-                        //  height: '22%',  
-                        top: 6,
-                        width: "86%"
-                    }}>
+                    <View style={styles.textInputContainer2}>
                         <Entypo style={{ top: '4%' }} size={25} name='text'></Entypo>
                         <Input placeholder='Description' style={styles.inputStyle1} multiline={true}
                             inputContainer={{ position: 'relative', }} />
@@ -80,21 +64,13 @@ export class NewTaskScreen extends Component {
                     </View>
 
 
-
-
-                    <View style={{
-                        flexDirection: "row",
-                        right: '100%',
-                        left: '13%',
-                        marginTop: '3%',
-                        width: "88%"
-                    }}>
+                    <View style={styles.textInputContainer3}>
                         <AntDesign style={{ top: '4%' }} size={25} name='clockcircleo'></AntDesign>
                         <Input placeholder='Due date' style={styles.inputStyle}
                             inputContainer={{}} />
-
                     </View>
                     <Line />
+
                 </View>
 
                 <View style={styles.buttonContainer}>
