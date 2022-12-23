@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, UseState, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, UseState, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import Header from '../../components/Header/Header';
 import Button from '../../components/Button';
 import { CustomText } from '../../components/CustomText';
@@ -8,29 +8,34 @@ import Input from '../../components/Input';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { styles } from './styles';
 
-const Login = ({navigation}) => {
+const Login = ({ navigation }) => {
 
     console.log("navProps", navigation)
     return (
 
         // <KeyboardAvoidingView  style={styles.container} behavior='height'>
-        <ScrollView style={styles.container}> 
+        <ScrollView style={styles.container}>
 
             <Header title='Log In' />
 
             <View style={styles.inputContainer}>
-                <Input placeholder='Email'  />
-                <Input placeholder='Password' iconText='Show' />
+                <Input placeholder='Email' />
+                <Input placeholder='Password'
+                    secureTextEntry={true}
+                    iconText='Show' />
             </View>
 
-            <View style={styles.buttonContainer}>
-                <Button onPress={() => navigation.navigate('Home')} text='Log In' />
-            </View >
+            <View style={{ bottom: '30%', marginTop: '40%' }}>
+                <View style={styles.buttonContainer}>
+                    <Button onPress={() => navigation.navigate('Home')} text='Log In' />
+                </View >
 
-            <View style={styles.textStyle}>
-                <CustomText touchable="true" text="Forgot your password?" />
+                <View style={styles.textStyle}>
+                    <CustomText touchable="true" text="Forgot your password?" />
 
-            </View>                   
+                </View>
+            </View>
+
 
         </ScrollView>
         // </KeyboardAvoidingView>

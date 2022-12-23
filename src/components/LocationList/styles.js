@@ -7,14 +7,15 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         // borderRadius: 15,
         // backgroundColor: 'orange',
-        marginLeft: '-2%' ,
+        marginLeft: '-1%' ,
         borderRadius: 7
     },
     date: {
         color: '#B9B9BE'
     },
     task: {
-        color: '#575767'
+        color: '#575767',
+        fontSize: 17
     }
 
 })

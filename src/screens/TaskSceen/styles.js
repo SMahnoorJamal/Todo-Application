@@ -5,7 +5,9 @@ export const styles = StyleSheet.create({
     container:{
         width: '100%',
         left: '4%',
-        marginTop: '5%'
+        marginTop: '5%',
+        flex: 1,
+        height: '100%'
     },
 
     tasksConTainer: {

@@ -30,7 +30,7 @@ export const Location = ({ navigation }) => {
                         <View style={styles.item}>
 
                             <Text style={{ color: 'red' }}>📍</Text>
-                            <View style={{ marginLeft: 7 }}>
+                            <View style={{ marginLeft: 20 }}>
                                 <Text style={styles.task}>Pustegränd, Stockholm, SE</Text>
                                 <Text style={styles.date}>59.3293° N, 18.0686° E</Text>
                             </View>

@@ -32,7 +32,11 @@ export const styles = StyleSheet.create({
     },
     CompletedText: {
         marginTop: '5%',
-        left: '4%',
+        left: '2%',
          width: '85%'
+    },
+    task: {
+        color: '#575767',
+        fontSize: 17
     }
 })

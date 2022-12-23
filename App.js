@@ -27,6 +27,19 @@ function Home() {
         navigationOptions={{
           tabBarLabel: 'Task2',
           tabBarIcon: () =>  <AntDesign name="addfile" size={25} />
+        }}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <View>
+                <Image
+                  source={require('../todoApplication/src/assets/icons/task.png')}
+                  resizeMode="contain"
+                  style={{ width: 28 }}
+                />
+              </View>
+            );
+          },
         }} />
 
       <Tab.Screen
@@ -36,7 +49,21 @@ function Home() {
           visible: true
         }}
         screenOptions={true}
-        setOptions= {true}  />
+        setOptions= {true} 
+        options={{
+        tabBarLabel: ({}) => {false},
+          tabBarIcon: ({focused})=> {
+            return (
+              <View>
+                <Image
+                  source={require('../todoApplication/src/assets/icons/addIcon.jpg')}
+                  resizeMode="contain"
+                  style={{ width: 60, bottom: 9}}
+                />
+              </View>
+            );
+          }
+        }} />
 
       <Tab.Screen
         name="Location"

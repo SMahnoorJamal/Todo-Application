@@ -70,7 +70,7 @@ export class NewTaskScreen extends Component {
 
                         <View style={styles.centeredView}>
                             <View style={styles.modalView}>
-                                <Text style={{ fontFamily: 'Inter', color: '#000000', fontSize: 25 }}>
+                                <Text style={{ fontFamily: 'Inter', color: '#000000', fontSize: 30 }}>
                                     Reminder
                                 </Text>
                                 <Text style={styles.modalText}>

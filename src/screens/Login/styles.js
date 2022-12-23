@@ -6,7 +6,10 @@ export const styles = StyleSheet.create({
     {
         // width:'90%',
         backgroundColor: 'white',
-        flex: 1
+        flex: 1,
+        height: "100%",
+    //  bottom: 50,
+        // top: 20
     },
 
     inputContainer: {
@@ -18,6 +21,7 @@ export const styles = StyleSheet.create({
     },
     textStyle: {
         alignItems: 'center',
-        marginTop: 9
+        marginTop: 9,
+        // bottom: 50
     }
 })

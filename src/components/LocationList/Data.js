@@ -1,23 +1,23 @@
 export const Data = [{
-    task: "Submit my resume",
+    task: "Halsengigaton StolkHolm, SE",
     date: "s59.3293° N, 18.0686° E"
 },
 
 {
-    task: "Complete the test",
+    task: "Pustegrand, Stolkholm, SE",
     date: "59.3293° N, 18.0686° "
 },
 
 {
-    task: "Meeting with Jack",
+    task: "Langa Gatan, Stolholm, SE",
     date: "59.3293° N, 18.0686° E"
 },
 {
-    task: "Buy a chocolate for Mom",
+    task: "Djurgarden, Stolkholm,",
     date: "59.3293° N, 18.0686° E"
 },
 {
-    task: "Facetime with Dad",
+    task: "Svartensgartan, SE",
     date: "59.3293° N, 18.0686° E"
 },
 ]

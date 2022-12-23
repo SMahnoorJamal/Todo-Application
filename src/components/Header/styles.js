@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native"
 export const styles = StyleSheet.create({
     header:
     {
-        height: 40,
+        height: 50,
         width: '100%',
         left: 4,
         right: 19,

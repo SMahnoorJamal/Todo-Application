@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#000000",
     borderRadius: 100,
     height: 51,
-    width: 200,
+    width: 300,
     justifyContent: 'center',
     left: 2,
     right: 16
@@ -38,7 +38,7 @@ buttonStyle2: {
   borderWidth: 2,
   borderColor:"black",
   height: 51,
-  width: 200,
+  width: 300,
   justifyContent: 'center',
   left: 2,
   right: 16
@@ -76,7 +76,7 @@ buttonStyle2: {
     margin: 20,
     backgroundColor: "white",
     borderRadius: 20,
-    padding: 35,
+    padding: 30,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -95,6 +95,9 @@ buttonStyle2: {
   },
   modalText: {
     marginBottom: 15,
-    textAlign: "center"
+    textAlign: "center",
+    width: 300,
+    fontSize: 20,
+    marginTop: 10
   }
 })

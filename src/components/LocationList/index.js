@@ -15,7 +15,7 @@ export const LocationList = () => {
                 renderItem={({ item, index }) => <RenderItem item={item} index={index} />}
             />
         </SafeAreaView>
-
+   
     )
 }
 
@@ -28,7 +28,7 @@ const RenderItem = ({ item, index }) => {
                     <CheckBox style={{ borderColor: '#DADADA', borderRadius: "10%" }} />
                 </View> */}
                 <Text style={{color: 'red'}}>📍</Text>
-                <View style={{ marginLeft: 7 }}>
+                <View style={{ marginLeft: 20 }}>
                     <Text style={styles.task}>{item.task}</Text>
                     <Text style={styles.date}>{item.date}</Text>
                 </View>
