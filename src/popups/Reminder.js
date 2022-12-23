@@ -1,108 +1,124 @@
-import React, { useState } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
+import React, { Component } from "react";
+import { Alert, StyleSheet, Text, Pressable, View } from "react-native";
 import Button from "../components/Button";
+import Modal from "react-native-modal";
 
-export const Reminder =({navigation}) => {
-    console.log("navifrr", {navigation})
+export class Remainder extends Component {
 
-    var visible = true
-    const [modalVisible, setModalVisible] = useState(true);
+  // Navigation Props
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalVisible: true,
+      NavProps: props,
+      props: null,
+      isLoading: true,
+      value: this.props.modalVisible
+    };
+  }
+  componentDidMount = () => {
+    console.log("componentdid", this.state.isModalVisible)
+    this.setState({ props: this.state.NavProps.navigation })
+  }
+
+  handleModal = () => {
+    this.setState({ isModalVisible: !this.state.isModalVisible })
+  }
+  handleModal2 = () => {
+    this.setState({ isLoading: false })
+  }
+  render() {
     return (
-        <View style={styles.centeredView}>
-        {/* <Modal
-          animationType="slide"
-        //   transparent={true}
-          backdropOpacity={0.3}
-          visible={modalVisible ? modalVisible : !modalVisible ? !modalVisible : modalVisible
-        }
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-            setModalVisible(!modalVisible);
-          }}
-        >
+
+      <Modal isVisible={this.state.value ? this.state.value : this.state.isModalVisible}>
+        <View style={{ flex: 1 }}>
+
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-                <Text>
+              <Text style={{ fontFamily: 'Inter', color: '#000000', fontSize: 30 }}>
                 Reminder
-                </Text>
+              </Text>
               <Text style={styles.modalText}>
-             
-Consequat velit qui adipisicing sunt do reprehenderit ad laborum tempor ullamco exercitation.
- Ullamco tempor adipisicing et voluptate duis sit esse aliqua esse ex dolore esse.
- Consequat velit qui adipisicing sunt.
+                Consequat velit qui adipisicing sunt do reprehenderit ad laborum tempor ullamco exercitation.
+                Ullamco tempor adipisicing et voluptate duis sit esse aliqua esse ex dolore esse.
+                Consequat velit qui adipisicing sunt.
               </Text>
 
-              <Button 
-              style={{
-              alignItems: "center",
-              backgroundColor: "#000000",
-              borderRadius: 100,
-              height: 51,
-              width: 200,
-              justifyContent: 'center',
-              left: 2,
-              right: 16}}
-              onPress={() => {navigation.navigate('TaskScreen'),setModalVisible(!modalVisible)}}
-               text="Remind me again"></Button>
+              <Button
+                style={styles.buttonStyle}
+                text="Remind me again"
+                onPress={this.handleModal}></Button>
 
 
-               <Text>Skip</Text>
-            </View> 
+              <Button
+                style={styles.buttonStyle2}
+                onPress={this.handleModal}
+                textStyle={{ color: "black" }}
+                text="Skip"
+              ></Button>
+            </View>
           </View>
-        </Modal> */}
-        {/* <Pressable
-          style={[styles.button, styles.buttonOpen]}
-          onPress={() => setModalVisible(true)}
-        >
-          <Text style={styles.textStyle}>Show Modal</Text>
-        </Pressable> */}
-      </View>
+
+        </View>
+      </Modal>
     )
+  }
 
 }
 
+
 const styles = StyleSheet.create({
-    centeredView: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      marginTop: 22,
-    //   backgroundColor: transparent
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 30,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
     },
-    modalView: {
-      margin: 20,
-      backgroundColor: "white",
-      borderRadius: 20,
-      padding: 35,
-      alignItems: "center",
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 2
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 4,
-      elevation: 5
-    },
-    button: {
-      borderRadius: 20,
-      padding: 10,
-      elevation: 2
-    },
-    buttonOpen: {
-      backgroundColor: "#F194FF",
-    },
-    buttonClose: {
-      backgroundColor: "#2196F3",
-    },
-    textStyle: {
-      color: "white",
-      fontWeight: "bold",
-      textAlign: "center"
-    },
-    modalText: {
-      marginBottom: 15,
-      textAlign: "center"
-    }
-  });
-  
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+
+  buttonStyle: {
+    alignItems: "center",
+    backgroundColor: "#000000",
+    borderRadius: 100,
+    height: 51,
+    width: 300,
+    justifyContent: 'center',
+    left: 2,
+    right: 16
+  },
+  buttonStyle2: {
+    alignItems: "center",
+    marginTop: 4,
+    backgroundColor: "white",
+    borderRadius: 100,
+    borderWidth: 2,
+    borderColor: "black",
+    height: 51,
+    width: 300,
+    justifyContent: 'center',
+    left: 2,
+    right: 16
+  },
+
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center",
+    width: 300,
+    fontSize: 20,
+    marginTop: 10
+  }
+});
